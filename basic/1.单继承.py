@@ -1,10 +1,9 @@
 class Master(object):
     def __init__(self):
-        self.martial_art = "Kongfu"
+        self.martial_art = 'kongfu'
 
     def show(self):
-        print('my genre is %s' % self.martial_art)
-
+        print('my gener is %s' % self.martial_art)
 
 class Student(Master):
     pass

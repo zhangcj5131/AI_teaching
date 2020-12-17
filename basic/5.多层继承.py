@@ -11,8 +11,6 @@ class School(object):
 
     def show(self):
         print('my gener is %s' % self.martial_art)
-        super().__init__()
-        super().show()
 
 
 class Student(School, Master):
@@ -32,9 +30,14 @@ class Student(School, Master):
         School.show(self)
 
     def show_all(self):
-        print('my gener is %s' % self.martial_art)
-        super().__init__()
-        super().show()
+        self.__init__()
+        self.show()
+
+        Master.__init__(self)
+        Master.show(self)
+
+        School.__init__(self)
+        School.show(self)
 
 class Tusun(Student):
     pass
@@ -42,3 +45,7 @@ class Tusun(Student):
 if __name__ == '__main__':
     s = Tusun()
     s.show_all()
+    # s.show()
+    # s.show_kongfu()
+    # s.show_boing()
+    # print(Student.mro())

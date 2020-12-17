@@ -5,7 +5,7 @@ class Master(object):
     def show(self):
         print('my gener is %s' % self.martial_art)
 
-class School(object):
+class School(Master):
     def __init__(self):
         self.martial_art = 'boxing'
 
@@ -15,7 +15,7 @@ class School(object):
         super().show()
 
 
-class Student(School, Master):
+class Student(School):
     def __init__(self):
         self.martial_art = 'free combat'
 
@@ -32,6 +32,14 @@ class Student(School, Master):
         School.show(self)
 
     def show_all(self):
+        # self.__init__()
+        # self.show()
+        #
+        # Master.__init__(self)
+        # Master.show(self)
+        #
+        # School.__init__(self)
+        # School.show(self)
         print('my gener is %s' % self.martial_art)
         super().__init__()
         super().show()
@@ -42,3 +50,7 @@ class Tusun(Student):
 if __name__ == '__main__':
     s = Tusun()
     s.show_all()
+    # s.show()
+    # s.show_kongfu()
+    # s.show_boing()
+    # print(Student.mro())
