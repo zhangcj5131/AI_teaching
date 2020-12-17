@@ -27,7 +27,7 @@ class Student(School):
         Master.__init__(self)
         Master.show(self)
 
-    def show_boing(self):
+    def show_boxing(self):
         School.__init__(self)
         School.show(self)
 
@@ -49,7 +49,8 @@ class Tusun(Student):
 
 if __name__ == '__main__':
     s = Tusun()
-    s.show_all()
+    # s.show_all()
+    s.show_boxing()
     # s.show()
     # s.show_kongfu()
     # s.show_boing()
