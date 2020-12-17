@@ -8,6 +8,8 @@ class Master(object):
 
 class Student(Master):
     pass
+
+
 if __name__ == '__main__':
     s = Student()
     s.show()
