@@ -1,17 +1,17 @@
-class Master(object):
+class Master:
     def __init__(self):
         self.martial_art = 'kongfu'
 
     def show(self):
-        print('my gener is %s' % self.martial_art)
+        print(self.martial_art)
 
-class School(object):
+
+class School:
     def __init__(self):
         self.martial_art = 'boxing'
 
     def show(self):
-        print('my gener is %s' % self.martial_art)
-
+        print(self.martial_art)
 
 class Student(School, Master):
     pass
