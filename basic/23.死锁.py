@@ -13,6 +13,7 @@ def sum_num1():
         g_num += 1
 
 
+
     print("sum1:", g_num)
     #释放锁
     mutex.release()
