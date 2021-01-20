@@ -1,6 +1,6 @@
 import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+
 
 '''
 sklearn.preprocessing.MinMaxScaler (feature_range=(0,1)… )
