@@ -7,10 +7,10 @@ from sklearn.neighbors import KNeighborsClassifier
 sklearn.neighbors.KNeighborsClassifier(n_neighbors=5,algorithm='auto')
 n_neighbors：int,可选（默认= 5），k_neighbors查询默认使用的邻居数
 algorithm：{‘auto’，‘ball_tree’，‘kd_tree’，‘brute’}
-auto:默认参数，可以理解为算法自己决定合适的搜索算法
-brute:是蛮力搜索，也就是线性扫描，当训练集很大时，计算非常耗时。
-kd_tree:数据维度 20 以下时效率最好,构造kd树存储数据以便对其进行快速检索的树形数据结构，kd树也就是数据结构中的二叉树。以中值切分构造的树，每个结点是一个超矩形。
-ball tree:是为了克服kd树高维失效而发明的，其构造过程是以质心C和半径r分割样本空间，每个节点是一个超球体。
+    auto:默认参数，可以理解为算法自己决定合适的搜索算法
+    brute:是蛮力搜索，也就是线性扫描，当训练集很大时，计算非常耗时。
+    kd_tree:数据维度 20 以下时效率最好,构造kd树存储数据以便对其进行快速检索的树形数据结构，kd树也就是数据结构中的二叉树。以中值切分构造的树，每个结点是一个超矩形。
+    ball tree:是为了克服kd树高维失效而发明的，其构造过程是以质心C和半径r分割样本空间，每个节点是一个超球体。
 '''
 
 # 1.获取数据集

@@ -31,7 +31,7 @@ def minmax_demo():
 sklearn.preprocessing.StandardScaler( )
     处理之后每列来说所有数据都聚集在均值0附近标准差差为1
     StandardScaler.fit_transform(X)
-    X:numpy array格式的数据[n_samples,n_features]
+    X:numpy array格式的数据[n_samples,n_features] or pd.DataFrame
     返回值：转换后的形状相同的array
 """
 def stand_demo():
@@ -40,11 +40,13 @@ def stand_demo():
     :return: None
     """
     data = pd.read_csv("../data/dating.txt")
-    print(data)
+
+    print(data.head())
     # 1、实例化一个转换器类
     transfer = StandardScaler()
     # 2、调用fit_transform
     data = transfer.fit_transform(data[['milage','Liters','Consumtime']])
+
     print("标准化的结果:\n", data)
     print("每一列特征的平均值：\n", transfer.mean_)
     print("每一列特征的方差：\n", transfer.var_)
