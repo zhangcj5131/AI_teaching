@@ -91,13 +91,12 @@ def linear_model_ridge():
     # 5.1 获取系数等值
     y_predict = model.predict(x_test)
     # print("预测值为:\n", y_predict)
-    print("模型中的系数为:\n", model.coef_)
-    print("模型中的偏置为:\n", model.intercept_)
-
-    # 5.2 评价
-    # 均方误差
-    error = mean_squared_error(y_test, y_predict)
-    print("误差为:\n", error)
+    print('偏置:', model.intercept_)
+    print('系数:', model.coef_)
+    #5.模型评估
+    y_pred = model.predict(x_test)
+    mean_square = mean_squared_error(y_test, y_pred)
+    print('square:', mean_square)
 
 linear_model_equation()
 print('*'*20)
