@@ -29,7 +29,7 @@ def linear_model_equation():
     transfer = StandardScaler()
     x_train = transfer.fit_transform(x_train)
     x_test = transfer.transform(x_test)
-    #4.机器学习
+    #4.机器学习,解方程
     model = LinearRegression()
     model.fit(x_train, y_train)
     print('偏置:', model.intercept_)
@@ -54,7 +54,7 @@ def linear_model_sgd():
     transfer = StandardScaler()
     x_train = transfer.fit_transform(x_train)
     x_test = transfer.transform(x_test)
-    #4.机器学习
+    #4.机器学习,使用随机梯度下降,默认没有正则,可以自己选择正则参数
     #model = SGDRegressor(max_iter=1000, learning_rate="constant", eta0=0.01)
     model = SGDRegressor(max_iter=1000)
     model.fit(x_train, y_train)
@@ -64,6 +64,8 @@ def linear_model_sgd():
     y_pred = model.predict(x_test)
     mean_square = mean_squared_error(y_test, y_pred)
     print('square:', mean_square)
+
+
 
 
 def linear_model_ridge():
@@ -82,7 +84,7 @@ def linear_model_ridge():
     x_train = transfer.fit_transform(x_train)
     x_test = transfer.fit_transform(x_test)
 
-    # 4.机器学习-线性回归(岭回归)
+    # 4.机器学习-线性回归(岭回归),实际上就是 l2 正则,同时使用的是随机平均梯度下降
     model = Ridge(alpha=1)
     # model = RidgeCV(alphas=(0.1, 1, 10))
     model.fit(x_train, y_train)

@@ -41,7 +41,7 @@ print(type(news.data))
 '''
 seaborn.lmplot() 是一个非常有用的方法，它会在绘制二维散点图时，自动完成回归拟合
 sns.lmplot() 里的 x, y 分别代表横纵坐标的列名,
-data= 是关联到数据集,
+data= 是关联到数据集,需要是 dataframe 类型
 hue=*代表按照 species即花的类别分类显示,
 fit_reg=是否进行线性拟合,默认是 False。
 '''
