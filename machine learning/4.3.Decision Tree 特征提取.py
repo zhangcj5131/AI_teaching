@@ -19,9 +19,12 @@ def dict_demo():
 
 
 def english_count_demo():
-    data = ["Lucky is a cat, he is my pet", "Lucky is a lovely cat, he dislike fish"]
+    data = ["Lucky is a cat, he is my pet",
+            "Lucky is a lovely cat, he dislikes fish"]
     transfer = CountVectorizer(stop_words=['is'])
     data = transfer.fit_transform(data)
+    print("文本特征抽取的结果：\n", data)
+    print("*"*20)
     print("文本特征抽取的结果,toarray：\n", data.toarray())
     # print("文本特征抽取的结果：\n", data)
     print("返回特征名字：\n", transfer.get_feature_names())
@@ -45,7 +48,7 @@ def chinese_tfidf_demo(data):
     text_list = []
     for sent in data:
         text_list.append(cut_word(sent))
-    print(text_list)
+    # print(text_list)
 
     # 1、实例化一个转换器类
     # transfer = CountVectorizer(sparse=False)
@@ -66,6 +69,7 @@ if __name__ == '__main__':
             "如果只用一种方式了解某样事物，你就不会真正了解它。了解事物真正含义的秘密取决于如何将其与我们所了解的事物相联系。"]
 
     # text = "一种还是一种今天很残酷，明天更残酷，后天很美好，但绝对大部分是死在明天晚上，所以每个人不要放弃今天。"
-    # print(' '.join(jieba.cut(text)))
+    # print(' '.join(list(jieba.cut(text))))
+    # print(''.join(jieba.cut(text)))
     # chinese_count_demo(data)
     chinese_tfidf_demo(data)

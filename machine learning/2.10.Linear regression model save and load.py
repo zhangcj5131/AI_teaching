@@ -5,8 +5,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression, SGDRegressor, Ridge, RidgeCV
 from sklearn.metrics import mean_squared_error
-from sklearn.externals import joblib
-
+# from sklearn.externals import joblib
+import joblib
 '''
 - from sklearn.externals import joblib
     - 保存：joblib.dump(estimator, 'test.pkl')
