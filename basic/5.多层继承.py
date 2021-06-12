@@ -41,3 +41,4 @@ if __name__ == '__main__':
     # # print(Student.mro())
     t = Tusun()
     t.show_kongfu()
+    t.show()

@@ -1,4 +1,4 @@
-class Master:
+class Master(object):
     def __init__(self):
         self.martial_art = 'kongfu'
 
